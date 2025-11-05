@@ -11,49 +11,46 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alltoolshub.pro"),
+  metadataBase: new URL("https://alltoolsz.online"),
   title: {
-    default: "AllToolsHub Pro - 20+ Free Online Tools | PDF, Image, Text Converters",
-    template: "%s | AllToolsHub Pro",
+    default: "AlltoolsZ - เครื่องมือออนไลน์ฟรี ครบทุกอย่างในที่เดียว",
+    template: "%s | AlltoolsZ",
   },
   description:
-    "Free online toolkit with 20+ tools: PDF to Image, Image Compressor, QR Generator, JSON Formatter, Base64 Encoder, and more. No sign-up required. All processing in your browser. Fast, secure, and private.",
+    "รวมเครื่องมือออนไลน์ฟรี เช่น แปลงไฟล์ คำนวณ แก้ไขรูปภาพ และอื่นๆ ใช้งานง่าย ครบจบในเว็บเดียว | Free online tools for file conversion, calculation, and editing — all in one place.",
   keywords: [
-    "online tools",
-    "free tools",
-    "PDF converter",
-    "image editor",
+    "AlltoolsZ",
+    "เครื่องมือออนไลน์",
+    "แปลงไฟล์",
+    "คำนวณ",
+    "ปรับขนาดรูปภาพ",
     "QR code generator",
-    "file converter",
-    "image compressor",
-    "JSON formatter",
-    "base64 encoder",
+    "PDF converter",
     "text tools",
     "developer tools",
-    "barcode generator",
-    "hash generator",
-    "password generator",
-    "UUID generator",
-    "word counter",
-    "case converter",
-    "CSV to JSON",
+    "ฟรีออนไลน์",
+    "All tools online",
+    "Base64 encoder",
+    "Image compressor",
+    "Word counter",
   ].join(", "),
-  authors: [{ name: "AllToolsHub Pro" }],
-  creator: "AllToolsHub Pro",
-  publisher: "AllToolsHub Pro",
+  authors: [{ name: "AlltoolsZ Team" }],
+  creator: "AlltoolsZ",
+  publisher: "AlltoolsZ",
   openGraph: {
-    title: "AllToolsHub Pro - 20+ Free Online Tools",
-    description: "Convert, edit, and create instantly — right in your browser. No sign-up required.",
+    title: "AlltoolsZ - เครื่องมือออนไลน์ฟรี ครบทุกอย่างในที่เดียว",
+    description:
+      "เว็บรวมเครื่องมือออนไลน์ฟรี ใช้งานง่าย ไม่ต้องสมัครสมาชิก รองรับทุกอุปกรณ์ | Free online tools for work and study.",
     type: "website",
-    locale: "en_US",
-    url: "https://alltoolshub.pro",
-    siteName: "AllToolsHub Pro",
+    locale: "th_TH",
+    url: "https://alltoolsz.online",
+    siteName: "AlltoolsZ",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AllToolsHub Pro - 20+ Free Online Tools",
-    description: "Convert, edit, and create instantly — right in your browser.",
-    creator: "@alltoolshub",
+    title: "AlltoolsZ - เครื่องมือออนไลน์ฟรี ครบทุกอย่างในที่เดียว",
+    description: "รวมเครื่องมือออนไลน์ฟรี เช่น แปลงไฟล์ คำนวณ และแก้ไขรูปภาพ ครบจบในเว็บเดียว",
+    creator: "@alltoolsz",
   },
   robots: {
     index: true,
@@ -67,12 +64,12 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://alltoolshub.pro",
+    canonical: "https://alltoolsz.online",
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "cqKdVidPvVYc_AFVGSmHIEMtxD0ULms8wy_7gLuBh_o", // ✅ ใช้ตัวนี้ที่คุณยืนยันกับ Google Search Console
   },
-  generator: 'v0.app'
+  generator: "Vercel + Next.js",
 }
 
 export default function RootLayout({
@@ -83,11 +80,14 @@ export default function RootLayout({
   const structuredData = generateStructuredData()
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="th" suppressHydrationWarning>
       <head>
         {/* Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+
+        {/* Google Verification */}
         <meta name="google-site-verification" content="cqKdVidPvVYc_AFVGSmHIEMtxD0ULms8wy_7gLuBh_o" />
+
         {/* Google Analytics GA4 */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9XHLZPE0F"></script>
         <script
