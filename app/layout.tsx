@@ -100,15 +100,45 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* ✅ Monetag Script */}
+        <script
+          src="https://fpyf8.com/88/tag.min.js"
+          data-zone="182989"
+          async
+          data-cfasync="false"
+        ></script>
       </head>
+
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
           <Header />
           {children}
           <Toaster />
         </ThemeProvider>
+
         <Analytics />
+
+        {/* ✅ Monetag Service Worker Registration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('Monetag SW registered with scope:', registration.scope);
+                    })
+                    .catch(function(error) {
+                      console.log('Monetag SW registration failed:', error);
+                    });
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   )
 }
+
