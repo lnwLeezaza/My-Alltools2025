@@ -87,7 +87,7 @@ export default function RootLayout({
       <head>
         {/* Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-
+        <meta name="google-site-verification" content="cqKdVidPvVYc_AFVGSmHIEMtxD0ULms8wy_7gLuBh_o" />
         {/* Google Analytics GA4 */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9XHLZPE0F"></script>
         <script
