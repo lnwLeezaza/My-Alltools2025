@@ -2,9 +2,8 @@ import type { MetadataRoute } from "next"
 import { tools } from "@/lib/tools-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://alltoolshub.pro"
+  const baseUrl = "https://www.alltoolsz.online"
 
-  // Homepage
   const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -14,10 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // All tool pages
   tools.forEach((tool) => {
     routes.push({
-      url: `${baseUrl}${tool.path}`,
+      url: `${baseUrl}${tool.path.startsWith("/") ? tool.path : `/${tool.path}`}`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
