@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { tools } from "@/lib/tools-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.alltoolsz.online"
+  const baseUrl = "https://alltoolsz.online"
 
   const routes: MetadataRoute.Sitemap = [
     {
