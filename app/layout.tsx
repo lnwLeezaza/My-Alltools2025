@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
          {/* Google Analytics GA4 */}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B9XHLZPE0F"
+        src="https://www.googletagmanager.com/gtag/js?id=G-95HX26MQDR"
       />
 
       <Script
