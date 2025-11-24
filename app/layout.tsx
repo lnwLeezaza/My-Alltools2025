@@ -47,23 +47,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           content="cqKdVidPvVYc_AFVGSmHIEMtxD0ULms8wy_7gLuBh_o"
         />
 
-        {/* Google Analytics GA4 */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-B9XHLZPE0F"
-        />
-        <Script
-          id="ga4-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-B9XHLZPE0F');
-            `,
-          }}
-        />
+         {/* Google Analytics GA4 */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-B9XHLZPE0F"
+      />
+
+      <Script
+        id="ga4-init"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-B9XHLZPE0F');
+        `}
+      </Script>
+        
       </head>
 
       <body className={`${inter.className} antialiased`}>
